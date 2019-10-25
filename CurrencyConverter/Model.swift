@@ -49,6 +49,7 @@ class Model: NSObject {
                     try data?.write(to: urlForSave)
                     print("Data was downloaded")
                     self.parseXML()
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Data was updated"), object: self)
                 } catch{
                     print("error while saving data - \(error.localizedDescription)")
                 }

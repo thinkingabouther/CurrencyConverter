@@ -12,9 +12,14 @@ class CoursesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Model.sharedInstance.currentDate
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Data was updated") , object: nil, queue: nil) { (notification) in
+            DispatchQueue.main.async {
+               self.navigationItem.title = Model.sharedInstance.currentDate
+               self.tableView.reloadData()
+            }
+        }
     }
+    
 
     // MARK: - Table view data source
 
