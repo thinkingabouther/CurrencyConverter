@@ -37,7 +37,7 @@ class CoursesController: UITableViewController {
         let currCourseForCell = Model.sharedInstance.currencies[indexPath.row]
         
         cell.textLabel?.text = currCourseForCell.Name!
-
+        cell.detailTextLabel?.text = currCourseForCell.Value!
         return cell
     }
     

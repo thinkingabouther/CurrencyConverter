@@ -27,10 +27,35 @@ class Model: NSObject {
         return URL(fileURLWithPath: pathToXML)
     }
     
-    
+    // http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002
     // function to load XML data from cbr.ru and saving it
-    func loadXML(date: Data) {
+    func loadXML(date: Date?) {
+        var strURL = "http://www.cbr.ru/scripts/XML_daily.asp?date_req="
         
+        if let date = date{
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            strURL += dateFormatter.string(from: date)
+        }
+        
+        let url = URL(string: strURL)
+        
+        let urlSession = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error == nil{
+                let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/currencyData.xml"
+                let urlForSave = URL(fileURLWithPath: path)
+                do{
+                    try data?.write(to: urlForSave)
+                } catch{
+                    print("error while saving data - \(error.localizedDescription)")
+                }
+            }
+            else{
+                print("Error while getting XML from server - \(error!.localizedDescription)")
+            }
+        }
+        urlSession.resume()
+    
     }
     
     /*

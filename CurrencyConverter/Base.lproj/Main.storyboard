@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-142" y="229"/>
         </scene>
-        <!--View Controller-->
+        <!--Конвертер-->
         <scene sceneID="EPP-UP-Vfd">
             <objects>
                 <viewController id="S53-Yi-tt2" sceneMemberID="viewController">
@@ -35,13 +35,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Hcc-5V-Mkr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cZa-y4-IyN"/>
+                    <navigationItem key="navigationItem" title="Конвертер" id="cZa-y4-IyN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqL-aU-gRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1759.4202898550725" y="531.69642857142856"/>
         </scene>
-        <!--Courses Controller-->
+        <!--Курсы-->
         <scene sceneID="O6w-bz-Zoj">
             <objects>
                 <tableViewController id="75Z-Pl-jJz" customClass="CoursesController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,12 +50,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="L11-TT-hyc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Kf2-Rm-x2Y" detailTextLabel="1IV-Wb-vQl" style="IBUITableViewCellStyleValue1" id="L11-TT-hyc">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L11-TT-hyc" id="wUw-5C-xer">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kf2-Rm-x2Y">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1IV-Wb-vQl">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -64,7 +80,7 @@
                             <outlet property="delegate" destination="75Z-Pl-jJz" id="yTG-s7-04C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AOY-NZ-yKt"/>
+                    <navigationItem key="navigationItem" title="Курсы" id="AOY-NZ-yKt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04h-pt-UE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
