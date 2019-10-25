@@ -14,12 +14,17 @@ class Model: NSObject {
     
     var currencies : [Currency] = []
     
+    // getting path to file from a bundle or from a file system on a device
     var pathToXML: String {
-        return ""
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/currencyData.xml"
+        if FileManager.default.fileExists(atPath: path){
+            return path
+        }
+        return Bundle.main.path(forResource: "currencyData", ofType: "xml")!
     }
     
     var urlToXML : URL?{
-        return nil
+        return URL(fileURLWithPath: pathToXML)
     }
     
     
