@@ -38,11 +38,10 @@ class Model: NSObject {
     and make notification to main view about it
     */
     func parseXML() {
+        currencies = []
         let xmlParser = XMLParser(contentsOf: urlToXML)
         xmlParser?.delegate = self
         xmlParser?.parse()
-        print(currencies)
-        
     }
 }
 
@@ -65,7 +64,16 @@ extension Model : XMLParserDelegate{
         if elementName == "Valute"{
             currentCurrency = Currency()
         }
-        
+    }
+
+    // called when any character is founded
+    func parser(_ parser: XMLParser, foundCharacters string: String){
+        currentCharacters = string
+    }
+    
+    // called when parser faced a closure of an XML element
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
+    
         if elementName == "NumCode"{
             currentCurrency!.NumCode = currentCharacters
         }
@@ -87,15 +95,7 @@ extension Model : XMLParserDelegate{
             currentCurrency!.Value = currentCharacters
             currentCurrency!.valueDouble = Double(currentCharacters.replacingOccurrences(of: ",", with: "."))
         }
-    }
-
-    // called when any character is founded
-    func parser(_ parser: XMLParser, foundCharacters string: String){
-        currentCharacters = string
-    }
-    
-    // called when parser faced a closure of an XML element
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
+        
         if elementName == "Valute"{
             currencies.append(currentCurrency!)
         }
