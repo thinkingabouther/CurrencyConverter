@@ -12,15 +12,34 @@ class CoursesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Data was updated") , object: nil, queue: nil) { (notification) in
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "DataStartedDownloading") , object: nil, queue: nil) { (notification) in
+            DispatchQueue.main.async {
+                print("DataStartedDownloading")
+                
+                let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium) // creating an activity indicator while data is loading
+                activityIndicator.startAnimating()
+                self.navigationItem.rightBarButtonItem?.customView = activityIndicator
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "DataUpdated") , object: nil, queue: nil) { (notification) in
             DispatchQueue.main.async {
                self.navigationItem.title = Model.sharedInstance.currentDate
                self.tableView.reloadData()
+                let barButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(self.refreshButtonPressed(_:))) // switching activity indicator back to button when data is loaded succesfully
+                self.navigationItem.rightBarButtonItem = barButtonItem
             }
         }
+        
+        self.navigationItem.title = Model.sharedInstance.currentDate
+        Model.sharedInstance.loadXML(date: nil)
     }
     
 
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        Model.sharedInstance.loadXML(date: nil)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

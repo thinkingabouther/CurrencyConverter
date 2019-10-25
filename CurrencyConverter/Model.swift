@@ -49,7 +49,7 @@ class Model: NSObject {
                     try data?.write(to: urlForSave)
                     print("Data was downloaded")
                     self.parseXML()
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Data was updated"), object: self)
+                    
                 } catch{
                     print("error while saving data - \(error.localizedDescription)")
                 }
@@ -58,6 +58,7 @@ class Model: NSObject {
                 print("Error while getting XML from server - \(error!.localizedDescription)")
             }
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataStartedDownloading"), object: self)
         urlSession.resume()
     
     }
@@ -72,6 +73,7 @@ class Model: NSObject {
         xmlParser?.delegate = self
         xmlParser?.parse()
         print("Data was updated")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataUpdated"), object: self)
     }
 }
 
