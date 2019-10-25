@@ -15,6 +15,7 @@ class Model: NSObject {
     var currencies : [Currency] = []
     var currentCurrency : Currency?
     var currentCharacters : String = ""
+    var currentDate : String = ""
     // getting path to file from a bundle or from a file system on a device
     var pathToXML: String {
         let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/currencyData.xml"
@@ -46,6 +47,8 @@ class Model: NSObject {
                 let urlForSave = URL(fileURLWithPath: path)
                 do{
                     try data?.write(to: urlForSave)
+                    print("Data was downloaded")
+                    self.parseXML()
                 } catch{
                     print("error while saving data - \(error.localizedDescription)")
                 }
@@ -67,6 +70,7 @@ class Model: NSObject {
         let xmlParser = XMLParser(contentsOf: urlToXML)
         xmlParser?.delegate = self
         xmlParser?.parse()
+        print("Data was updated")
     }
 }
 
@@ -85,7 +89,11 @@ extension Model : XMLParserDelegate{
     
     // called when parser faced an opening of an XML element
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]){
-        
+        if elementName == "ValCurs"{
+            if let currentDateString = attributeDict["Date"]{
+                currentDate = currentDateString
+            }
+        }
         if elementName == "Valute"{
             currentCurrency = Currency()
         }
