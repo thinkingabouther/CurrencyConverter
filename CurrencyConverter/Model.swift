@@ -24,6 +24,7 @@ class Model: NSObject {
         }
         return Bundle.main.path(forResource: "currencyData", ofType: "xml")!
     }
+    
     var urlToXML : URL{
         return URL(fileURLWithPath: pathToXML)
     }
@@ -74,12 +75,25 @@ class Model: NSObject {
     and make notification to main view about it
     */
     func parseXML() {
-        currencies = []
+        currencies = [Currency.rouble()]
         let xmlParser = XMLParser(contentsOf: urlToXML)
         xmlParser?.delegate = self
         xmlParser?.parse()
         print("Data was updated")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataUpdated"), object: self)
+    }
+    
+    // --------CONVERTER--------
+    
+    var fromCurrency : Currency = Currency.rouble()
+    var toCurrency : Currency = Currency.rouble()
+    
+    func Convert(amount : Double?) -> String? {
+        if amount == nil{
+            return ""
+        }
+        let k = fromCurrency.nominalDouble! * fromCurrency.valueDouble! / (toCurrency.nominalDouble! * toCurrency.valueDouble!) * amount!
+        return String(k)
     }
 }
 
@@ -156,5 +170,14 @@ class Currency{
     var Nominal : String?
     var nominalDouble : Double?
     
-    
+    class func rouble() -> Currency {
+        let r = Currency()
+        r.CharCode = "RUB"
+        r.Name = "Российский рубль"
+        r.Nominal = "1"
+        r.nominalDouble = 1
+        r.Value = "1"
+        r.valueDouble = 1
+        return r
+    }
 }

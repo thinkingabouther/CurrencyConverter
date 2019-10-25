@@ -16,6 +16,7 @@
 		D48751852363043C00360FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48751832363043C00360FAB /* LaunchScreen.storyboard */; };
 		D49183D82363545400F09B2A /* CoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49183D72363545400F09B2A /* CoursesController.swift */; };
 		D4F5B57123637FAE0075C9DF /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5B57023637FAE0075C9DF /* SettingsController.swift */; };
+		D4F5B57323639E620075C9DF /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5B57223639E620075C9DF /* ConverterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D48751862363043C00360FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49183D72363545400F09B2A /* CoursesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesController.swift; sourceTree = "<group>"; };
 		D4F5B57023637FAE0075C9DF /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		D4F5B57223639E620075C9DF /* ConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D48751782363043A00360FAB /* AppDelegate.swift */,
 				D487517A2363043A00360FAB /* SceneDelegate.swift */,
 				D487517E2363043A00360FAB /* Main.storyboard */,
+				D4F5B57223639E620075C9DF /* ConverterController.swift */,
 				D46C839F2363054100F5CEEE /* currencyData.xml */,
 				D49183D72363545400F09B2A /* CoursesController.swift */,
 				D48751812363043C00360FAB /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				D4F5B57123637FAE0075C9DF /* SettingsController.swift in Sources */,
 				D487517B2363043A00360FAB /* SceneDelegate.swift in Sources */,
 				D49183D82363545400F09B2A /* CoursesController.swift in Sources */,
+				D4F5B57323639E620075C9DF /* ConverterController.swift in Sources */,
 				D46C83A42363058F00F5CEEE /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
