@@ -32,6 +32,20 @@ class CoursesController: UITableViewController {
             }
         }
         
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "DataNotLoaded"), object: nil, queue: nil) { (notification) in
+            print("Error data not loaded")
+            
+            DispatchQueue.main.async {
+            let errorname = notification.userInfo!["ErrorName"]
+            let alert = UIAlertController(title: "Error", message: (errorname as! String), preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            let barButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(self.refreshButtonPressed(_:))) // switching activity indicator back to button when data is loaded succesfully
+            self.navigationItem.rightBarButtonItem = barButtonItem
+            }
+        }
+        
         self.navigationItem.title = Model.sharedInstance.currentDate
         Model.sharedInstance.loadXML(date: nil)
     }

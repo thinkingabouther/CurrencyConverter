@@ -40,7 +40,7 @@ class Model: NSObject {
         }
         
         let url = URL(string: strURL)
-        
+        var errorWhileLoading : String?
         let urlSession = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil{
                 let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.libraryDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/currencyData.xml"
@@ -52,10 +52,16 @@ class Model: NSObject {
                     
                 } catch{
                     print("error while saving data - \(error.localizedDescription)")
+                    errorWhileLoading = error.localizedDescription
                 }
             }
             else{
                 print("Error while getting XML from server - \(error!.localizedDescription)")
+                errorWhileLoading = error!.localizedDescription
+            }
+            
+            if let errorWhileLoading = errorWhileLoading{
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataNotLoaded"), object: self, userInfo: ["ErrorName":errorWhileLoading])
             }
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataStartedDownloading"), object: self)
