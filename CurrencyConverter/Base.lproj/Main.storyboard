@@ -97,6 +97,57 @@
             </objects>
             <point key="canvasLocation" x="1759.4202898550725" y="531.69642857142856"/>
         </scene>
+        <!--Выберите валюту-->
+        <scene sceneID="6Zb-aZ-7ol">
+            <objects>
+                <tableViewController id="Uji-Qt-0kq" customClass="SelectCurrencyController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bJo-z0-cEh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PvM-am-fKi">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PvM-am-fKi" id="14A-oc-JxR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uji-Qt-0kq" id="uDu-2T-Q7c"/>
+                            <outlet property="delegate" destination="Uji-Qt-0kq" id="lNF-rk-4AI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Выберите валюту" id="eeV-F0-OBu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sZi-66-iwZ">
+                            <connections>
+                                <action selector="CancelButtonPressed:" destination="Uji-Qt-0kq" id="5Wr-cY-LpY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pak-aS-6sN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3606" y="532"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cRT-xk-evJ">
+            <objects>
+                <navigationController storyboardIdentifier="selectedCurrencyNSID" id="B9q-kZ-iuG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hb3-uc-5dC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uji-Qt-0kq" kind="relationship" relationship="rootViewController" id="yyg-Pm-skH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Prf-2N-oer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="532"/>
+        </scene>
         <!--Settings Controller-->
         <scene sceneID="CPh-gu-pd5">
             <objects>

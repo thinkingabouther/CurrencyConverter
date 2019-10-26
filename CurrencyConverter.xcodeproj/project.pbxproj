@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44FDB92236446B7004B154D /* SelectCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FDB91236446B7004B154D /* SelectCurrencyController.swift */; };
+		D44FDB9423645043004B154D /* flagsImages in Resources */ = {isa = PBXBuildFile; fileRef = D44FDB9323645043004B154D /* flagsImages */; };
 		D46C83A02363054100F5CEEE /* currencyData.xml in Resources */ = {isa = PBXBuildFile; fileRef = D46C839F2363054100F5CEEE /* currencyData.xml */; };
 		D46C83A42363058F00F5CEEE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C83A32363058F00F5CEEE /* Model.swift */; };
 		D48751792363043A00360FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48751782363043A00360FAB /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D44FDB91236446B7004B154D /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
+		D44FDB9323645043004B154D /* flagsImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flagsImages; sourceTree = "<group>"; };
 		D46C839F2363054100F5CEEE /* currencyData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = currencyData.xml; sourceTree = "<group>"; };
 		D46C83A32363058F00F5CEEE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D48751752363043A00360FAB /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,8 +68,10 @@
 		D48751772363043A00360FAB /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				D44FDB9323645043004B154D /* flagsImages */,
 				D48751782363043A00360FAB /* AppDelegate.swift */,
 				D487517A2363043A00360FAB /* SceneDelegate.swift */,
+				D44FDB91236446B7004B154D /* SelectCurrencyController.swift */,
 				D487517E2363043A00360FAB /* Main.storyboard */,
 				D4F5B57223639E620075C9DF /* ConverterController.swift */,
 				D46C839F2363054100F5CEEE /* currencyData.xml */,
@@ -137,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44FDB9423645043004B154D /* flagsImages in Resources */,
 				D46C83A02363054100F5CEEE /* currencyData.xml in Resources */,
 				D48751852363043C00360FAB /* LaunchScreen.storyboard in Resources */,
 				D48751822363043C00360FAB /* Assets.xcassets in Resources */,
@@ -152,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48751792363043A00360FAB /* AppDelegate.swift in Sources */,
+				D44FDB92236446B7004B154D /* SelectCurrencyController.swift in Sources */,
 				D4F5B57123637FAE0075C9DF /* SettingsController.swift in Sources */,
 				D487517B2363043A00360FAB /* SceneDelegate.swift in Sources */,
 				D49183D82363545400F09B2A /* CoursesController.swift in Sources */,

@@ -81,6 +81,14 @@ class Model: NSObject {
         xmlParser?.parse()
         print("Data was updated")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DataUpdated"), object: self)
+        for currency in currencies{
+            if currency.CharCode == toCurrency.CharCode{
+                toCurrency = currency
+            }
+            if currency.CharCode == fromCurrency.CharCode{
+                fromCurrency = currency
+            }
+        }
     }
     
     // --------CONVERTER--------

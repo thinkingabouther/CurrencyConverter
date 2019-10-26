@@ -25,9 +25,19 @@ class ConverterController: UIViewController {
 
     
     @IBAction func pushFromAction(_ sender: Any) {
+        let navController = storyboard?.instantiateViewController(identifier: "selectedCurrencyNSID") as! UINavigationController
+        (navController.viewControllers[0] as! SelectCurrencyController).flagCurrency = .From
+        navController.modalPresentationStyle = .fullScreen
+
+        present(navController, animated: true, completion: nil)
     }
     
     @IBAction func pushToAction(_ sender: Any) {
+        let navController = storyboard?.instantiateViewController(identifier: "selectedCurrencyNSID") as! UINavigationController
+        (navController.viewControllers[0] as! SelectCurrencyController).flagCurrency = .To
+        navController.modalPresentationStyle = .fullScreen
+        
+        present(navController, animated: true, completion: nil)
     }
     
     @IBAction func textFromChanged(_ sender: Any) {
@@ -44,6 +54,9 @@ class ConverterController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         refreshButtonsCaptions()
+        textFromChanged(self)
+        CoursesDateLabel.text = "Курсы за: \(Model.sharedInstance.currentDate)"
+        navigationItem.rightBarButtonItem = nil
     }
     
     @objc func doneButtonWasPressed(){
