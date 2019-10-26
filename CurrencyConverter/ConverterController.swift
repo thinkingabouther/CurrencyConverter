@@ -12,7 +12,7 @@ class ConverterController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textFrom.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -22,6 +22,7 @@ class ConverterController: UIViewController {
     @IBOutlet weak var ButtonFrom: UIButton!
     @IBOutlet weak var textFrom: UITextField!
     @IBOutlet weak var textTo: UITextField!
+
     
     @IBAction func pushFromAction(_ sender: Any) {
     }
@@ -29,22 +30,35 @@ class ConverterController: UIViewController {
     @IBAction func pushToAction(_ sender: Any) {
     }
     
+    @IBAction func textFromChanged(_ sender: Any) {
+        let amount = Double(textFrom.text!)
+        textTo.text = Model.sharedInstance.Convert(amount: amount)
+    }
+    
     func refreshButtonsCaptions() {
         ButtonTo.setTitle(Model.sharedInstance.toCurrency.CharCode, for: UIControl.State.normal)
         ButtonFrom.setTitle(Model.sharedInstance.fromCurrency.CharCode, for: UIControl.State.normal)
     }
     
+
+    
     override func viewWillAppear(_ animated: Bool) {
         refreshButtonsCaptions()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func doneButtonWasPressed(){
+        textFrom.resignFirstResponder()
+        navigationItem.rightBarButtonItem = nil
     }
-    */
+}
+
+extension ConverterController : UITextFieldDelegate{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool{
+        print("Editing")
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(doneButtonWasPressed))
+        navigationItem.rightBarButtonItem = doneButton
+        return true
+    }
 
 }
+    
