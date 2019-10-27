@@ -274,7 +274,7 @@
         <scene sceneID="iod-T9-mEk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ftr-9O-hmw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Курсы" id="yRE-jq-axr"/>
+                    <tabBarItem key="tabBarItem" title="Курсы" image="CoursesTab" id="yRE-jq-axr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XoX-qj-4X1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -293,7 +293,7 @@
         <scene sceneID="nd8-7F-vlv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ffH-PB-m64" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Конвертер" id="WyK-ks-PbW"/>
+                    <tabBarItem key="tabBarItem" title="Конвертер" image="ConverterTab" id="WyK-ks-PbW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z1b-Rb-pN6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -327,4 +327,8 @@
             <point key="canvasLocation" x="1759" y="-948"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ConverterTab" width="25" height="25"/>
+        <image name="CoursesTab" width="25" height="25"/>
+    </resources>
 </document>
