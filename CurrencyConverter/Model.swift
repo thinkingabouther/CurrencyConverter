@@ -178,6 +178,14 @@ class Currency{
     var Nominal : String?
     var nominalDouble : Double?
     
+    var Flag : UIImage?{
+        if let CharCode = CharCode {
+            let image = UIImage(named: "flagsImages/" + CharCode + ".png")
+            return image
+        }
+        return nil
+    }
+    
     class func rouble() -> Currency {
         let r = Currency()
         r.CharCode = "RUB"

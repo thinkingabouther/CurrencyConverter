@@ -66,12 +66,11 @@ class CoursesController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CurrencyCell
 
-        let currCourseForCell = Model.sharedInstance.currencies[indexPath.row]
+        let currentCurrencyForCell = Model.sharedInstance.currencies[indexPath.row]
         
-        cell.textLabel?.text = currCourseForCell.Name!
-        cell.detailTextLabel?.text = currCourseForCell.Value!
+        cell.initCell(currency: currentCurrencyForCell)
         return cell
     }
     

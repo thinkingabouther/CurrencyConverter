@@ -52,9 +52,9 @@ class SelectCurrencyController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CurrencyCell
 
-        cell.textLabel?.text = Model.sharedInstance.currencies[indexPath.row].Name
+        cell.initCell(currency: Model.sharedInstance.currencies[indexPath.row])
 
         return cell
     }
