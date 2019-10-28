@@ -20,6 +20,9 @@
 		D49183D82363545400F09B2A /* CoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49183D72363545400F09B2A /* CoursesController.swift */; };
 		D4F5B57123637FAE0075C9DF /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5B57023637FAE0075C9DF /* SettingsController.swift */; };
 		D4F5B57323639E620075C9DF /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5B57223639E620075C9DF /* ConverterController.swift */; };
+		D4FF103223676828006DCE30 /* iconCurrencyConverter.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FF103123676828006DCE30 /* iconCurrencyConverter.png */; };
+		D4FF103423676B0A006DCE30 /* iconCurrencyConverter_rounded.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FF103323676B0A006DCE30 /* iconCurrencyConverter_rounded.png */; };
+		D4FF103623676C4E006DCE30 /* CaptionForLoadingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D4FF103523676C4E006DCE30 /* CaptionForLoadingScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		D49183D72363545400F09B2A /* CoursesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesController.swift; sourceTree = "<group>"; };
 		D4F5B57023637FAE0075C9DF /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		D4F5B57223639E620075C9DF /* ConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
+		D4FF103123676828006DCE30 /* iconCurrencyConverter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconCurrencyConverter.png; sourceTree = "<group>"; };
+		D4FF103323676B0A006DCE30 /* iconCurrencyConverter_rounded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconCurrencyConverter_rounded.png; sourceTree = "<group>"; };
+		D4FF103523676C4E006DCE30 /* CaptionForLoadingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaptionForLoadingScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		D48751772363043A00360FAB /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				D4FF103523676C4E006DCE30 /* CaptionForLoadingScreen.png */,
+				D4FF103323676B0A006DCE30 /* iconCurrencyConverter_rounded.png */,
+				D4FF103123676828006DCE30 /* iconCurrencyConverter.png */,
 				D44FDB9323645043004B154D /* flagsImages */,
 				D48751782363043A00360FAB /* AppDelegate.swift */,
 				D487517A2363043A00360FAB /* SceneDelegate.swift */,
@@ -147,7 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44FDB9423645043004B154D /* flagsImages in Resources */,
+				D4FF103623676C4E006DCE30 /* CaptionForLoadingScreen.png in Resources */,
 				D46C83A02363054100F5CEEE /* currencyData.xml in Resources */,
+				D4FF103423676B0A006DCE30 /* iconCurrencyConverter_rounded.png in Resources */,
+				D4FF103223676828006DCE30 /* iconCurrencyConverter.png in Resources */,
 				D48751852363043C00360FAB /* LaunchScreen.storyboard in Resources */,
 				D48751822363043C00360FAB /* Assets.xcassets in Resources */,
 				D48751802363043A00360FAB /* Main.storyboard in Resources */,
