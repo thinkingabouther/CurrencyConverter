@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D43AF536240C4EB6003FE46A /* CoursesViewShot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43AF534240C4EB5003FE46A /* CoursesViewShot.jpg */; };
+		D43AF537240C4EB6003FE46A /* ConverterViewShot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D43AF535240C4EB6003FE46A /* ConverterViewShot.jpg */; };
 		D44FDB92236446B7004B154D /* SelectCurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FDB91236446B7004B154D /* SelectCurrencyController.swift */; };
 		D44FDB962365A1F2004B154D /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44FDB952365A1F2004B154D /* CurrencyCell.swift */; };
 		D46C83A42363058F00F5CEEE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C83A32363058F00F5CEEE /* Model.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D43AF534240C4EB5003FE46A /* CoursesViewShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CoursesViewShot.jpg; sourceTree = "<group>"; };
+		D43AF535240C4EB6003FE46A /* ConverterViewShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ConverterViewShot.jpg; sourceTree = "<group>"; };
 		D44FDB91236446B7004B154D /* SelectCurrencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyController.swift; sourceTree = "<group>"; };
 		D44FDB952365A1F2004B154D /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		D46C83A32363058F00F5CEEE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		D4FF103723676FE4006DCE30 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				D43AF535240C4EB6003FE46A /* ConverterViewShot.jpg */,
+				D43AF534240C4EB5003FE46A /* CoursesViewShot.jpg */,
 				D48751812363043C00360FAB /* Assets.xcassets */,
 				D4FF103523676C4E006DCE30 /* CaptionForLoadingScreen.png */,
 				D4FF103323676B0A006DCE30 /* iconCurrencyConverter_rounded.png */,
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43AF537240C4EB6003FE46A /* ConverterViewShot.jpg in Resources */,
 				D4FF103623676C4E006DCE30 /* CaptionForLoadingScreen.png in Resources */,
 				D4FF103423676B0A006DCE30 /* iconCurrencyConverter_rounded.png in Resources */,
 				D4FF1084236770FA006DCE30 /* flagsImages in Resources */,
@@ -199,6 +206,7 @@
 				D48751852363043C00360FAB /* LaunchScreen.storyboard in Resources */,
 				D48751822363043C00360FAB /* Assets.xcassets in Resources */,
 				D48751802363043A00360FAB /* Main.storyboard in Resources */,
+				D43AF536240C4EB6003FE46A /* CoursesViewShot.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
