@@ -22,11 +22,11 @@ Exchange rates are exported from the official [CBR site](https://www.cbr.ru/curr
 
 ### Content of the page
 
-- Getting started
-  - Requirements
-  - Installation
-- Usage
-- Troubleshooting
+- [Getting started](@Getting-started)
+  - [Requirements](@Requirements)
+  - [Installation](@Installation)
+- [Usage](@Usage)
+- [Troubleshooting](@Troubleshooting)
 
 ## Getting started
 ### Requirements
@@ -41,8 +41,8 @@ Exchange rates are exported from the official [CBR site](https://www.cbr.ru/curr
 5. Build a project and run it on your iPhone 
 ## Usage
 There are two main views of the app:
-- Courses view
-- Converter view
+- [Courses view](@Courses-view)
+- [Converter view](@Converter-view)
 
 ### Courses view
 ![Courses view screenshot](/CurrencyConverter/resources/CoursesViewShot.jpg)
