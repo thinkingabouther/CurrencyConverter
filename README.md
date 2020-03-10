@@ -5,19 +5,19 @@
 
 This app allow you to find up-to-date exchange rates and quickly transfer between more than __35 currencies__!
 
-Exchange rates are exported from the official [CBR site](https://www.cbr.ru/currency_base/daily/) as an XML file
+Exchange rates are exported from the official [CBR site](https://www.cbr.ru/currency_base/daily/) as an XML file.
 
 ### Implemented functions:
-- Conversion between currencies with __up-to-date rate__
-- Getting rates from __any date in the past__ and converting to any other currency from the list 
+- Conversion between currencies with __up-to-date rate__;
+- Getting rates from __any date in the past__ and converting to any other currency from the list. 
 
 ### In dev:
-- Graphing the changing of rates over time 
+- Graphing the changing of rates over time.
 
 ### List of available currencies
-- Russian ruble
-- US dollar
-- Euro
+- Russian ruble;
+- US dollar;
+- Euro;
 - GBP, etc.
 
 ### Content of the page
@@ -26,23 +26,25 @@ Exchange rates are exported from the official [CBR site](https://www.cbr.ru/curr
   - [Requirements](#Requirements)
   - [Installation](#Installation)
 - [Usage](#Usage)
+  - [Courses view](#Courses-view)
+  - [Converter view](#Converter-view)
 - [Troubleshooting](#Troubleshooting)
 
 ## Getting started
 ### Requirements
- - macOS Catalina or newer
- - Xcode 11 or newer
- - iOS 13 or newer
+ - macOS Catalina or newer;
+ - Xcode 11 or newer;
+ - iOS 13 or newer.
 ### Installation
-1. Install Xcode on your Mac from Mac AppStore or using a [link](https://developer.apple.com/xcode/resources/)
-2. Download the source code of a project and unpack it
-3. Open the *.xcodeproject* file to open the project using Xcode
-4. Attach your iPhone to your Mac via cabel or using a hotspot
-5. Build a project and run it on your iPhone 
+1. Install Xcode on your Mac from Mac AppStore or using a [link](https://developer.apple.com/xcode/resources/);
+2. Download the source code of a project and unpack it;
+3. Open the *.xcodeproject* file to open the project using Xcode;
+4. Attach your iPhone to your Mac via cabel or using a hotspot;
+5. Build a project and run it on your iPhone.
 ## Usage
 There are two main views of the app:
-- [Courses view](#Courses-view)
-- [Converter view](#Converter-view)
+- [Courses view](#Courses-view);
+- [Converter view](#Converter-view).
 
 ### Courses view
 ![Courses view screenshot](/CurrencyConverter/resources/CoursesViewShot.jpg)
@@ -59,7 +61,7 @@ Here you can view the exchange rates and customize the date for both the convert
 Here you can transfer value given in one currency to another.  
 #### UI Elements description:
 1. Two buttons that are responsible for choosing a currency from the list;
-2. The textbox allows you to enter a value in the original currency. Transfered value will be shown in the textbox on the right
+2. The textbox allows you to enter a value in the original currency. Transfered value will be shown in the textbox on the right.
 
 ## Troubleshooting
-If you are getting into trouble installing or using the app or have found any bug please contact me at aineustroev_1@edu.hse.ru
+If you are getting into trouble installing or using the app or have found any bug please contact me at aineustroev_1@edu.hse.ru.
